@@ -3,7 +3,7 @@ from geometry_msgs.msg import Twist
 
 def main():
     rospy.init_node('publisher')
-    pub = rospy.Publisher('/cmd_vel_mux/input/navi', Twist, queue_size=1)
+    pub = rospy.Publisher('/cmd_vel/input/navi', Twist, queue_size=1)
     rate = rospy.Rate(10)
     move = Twist()
     move.linear.x = 0.5
